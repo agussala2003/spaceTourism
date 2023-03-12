@@ -1,0 +1,927 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&display=swap");
+/*font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif;*/
+:root {
+  --white: #FFFFFF;
+  --dark: #0B0D17;
+  --middle: #D0D6F9;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulseanimation {
+  0% {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.11);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 68px rgba(255, 255, 255, 0.11);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-image: url("../starter-code/assets/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white);
+  min-height: -webkit-fill-available;
+}
+
+.destination {
+  background-image: url("../starter-code/assets/destination/background-destination-mobile.jpg");
+}
+
+.crew {
+  background-image: url("../starter-code/assets/crew/background-crew-mobile.jpg");
+}
+
+.technology {
+  background-image: url("../starter-code/assets/technology/background-technology-mobile.jpg");
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 24px auto;
+}
+header nav .logoContainer {
+  transform: scale(0.9);
+}
+header nav .linksContainer {
+  display: none;
+  position: absolute;
+  width: 254px;
+  min-height: 100vh;
+  right: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  animation: appear 0.5s;
+}
+header nav .linksContainer ul {
+  margin: 118px 0 0 32px;
+}
+header nav .linksContainer ul a {
+  text-decoration: none;
+  color: var(--white);
+}
+header nav .linksContainer ul li {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+header nav .linksContainer ul li p:first-child {
+  font-family: "Barlow Condensed";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+}
+header nav .linksContainer ul li p:last-child {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+header nav .linksContainer ul .active {
+  border-right: 3px solid var(--white);
+}
+header nav .iconContainer div {
+  cursor: pointer;
+}
+header nav .iconContainer .close {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 38px;
+  z-index: 1;
+}
+header nav .active {
+  display: block;
+}
+header nav .active .close {
+  display: block;
+}
+
+main .homeMain {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+main .homeMain .infoHome {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+main .homeMain .infoHome p:first-child {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2.7px;
+  color: var(--middle);
+}
+main .homeMain .infoHome p:last-child {
+  text-align: center;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--middle);
+}
+main .homeMain .infoHome h1 {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 80px;
+  text-align: center;
+}
+main .homeMain .btnCircle {
+  background: var(--white);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+main .homeMain .btnCircle p {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  color: #0B0D17;
+}
+main .destinationMain {
+  width: 90%;
+  margin: 0 auto;
+}
+main .destinationMain .planet {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+main .destinationMain .planet img {
+  width: 100%;
+}
+main .destinationMain .pick {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+main .destinationMain .pick p {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+main .destinationMain .pick p:first-child {
+  opacity: 0.25;
+}
+main .destinationMain .tabSection {
+  margin-top: 26px;
+}
+main .destinationMain .tabSection .tabs {
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+}
+main .destinationMain .tabSection .tabs p {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  color: var(--white);
+  padding-bottom: 8px;
+  border-bottom: 3px solid var(--white);
+}
+main .destinationMain .tabSection .tabs .inactive {
+  color: var(--middle);
+  border-bottom: none;
+}
+main .destinationMain .tabSection .infoSection {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+main .destinationMain .tabSection .infoSection .firstBand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #383B4B;
+}
+main .destinationMain .tabSection .infoSection .firstBand h1 {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  color: var(--white);
+  text-transform: uppercase;
+}
+main .destinationMain .tabSection .infoSection .firstBand p {
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--middle);
+}
+main .destinationMain .tabSection .infoSection .secondBand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 32px;
+  margin-bottom: 20px;
+}
+main .destinationMain .tabSection .infoSection .secondBand div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+main .destinationMain .tabSection .infoSection .secondBand div p:first-child {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: var(--middle);
+}
+main .destinationMain .tabSection .infoSection .secondBand div p:last-child {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
+main .crewMain .pick {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+main .crewMain .pick p {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+main .crewMain .pick p:first-child {
+  opacity: 0.25;
+}
+main .crewMain .imgContainer {
+  margin: 0 auto;
+  margin-top: 32px;
+  width: fit-content;
+  height: 222px;
+}
+main .crewMain .imgContainer img {
+  height: 100%;
+}
+main .crewMain .bulletContainer {
+  padding-top: 32px;
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #383B4B;
+}
+main .crewMain .bulletContainer .bullets {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+main .crewMain .bulletContainer .bullets div {
+  width: 10px;
+  height: 10px;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.17;
+  border-radius: 100%;
+  cursor: pointer;
+}
+main .crewMain .bulletContainer .bullets .active {
+  opacity: 1;
+}
+main .crewMain .infoContainer {
+  margin-top: 32px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .crewMain .infoContainer h4 {
+  margin-bottom: 8px;
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+main .crewMain .infoContainer h3 {
+  margin-bottom: 16px;
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+main .crewMain .infoContainer p {
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #D0D6F9;
+  width: 90%;
+}
+main .techMain .pick {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+main .techMain .pick p {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+main .techMain .pick p:first-child {
+  opacity: 0.25;
+}
+main .techMain .imgContainer {
+  margin-top: 32px;
+  margin-bottom: 34px;
+}
+main .techMain .imgContainer img {
+  width: 100%;
+}
+main .techMain .imgContainer #vImg2 {
+  display: none;
+}
+main .techMain .pickerContainer {
+  margin-bottom: 26px;
+}
+main .techMain .pickerContainer .pickers {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+main .techMain .pickerContainer .pickers p {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+}
+main .techMain .pickerContainer .pickers .active {
+  background: var(--white);
+  border: none;
+  color: var(--dark);
+}
+main .techMain .infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .techMain .infoContainer h6 {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 2.3625px;
+  color: var(--middle);
+  margin-bottom: 9px;
+}
+main .techMain .infoContainer h3 {
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+main .techMain .infoContainer p {
+  width: 80%;
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--middle);
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 750px) {
+  html {
+    background-image: url("../starter-code/assets/home/background-home-tablet.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+  }
+  .destination {
+    background-image: url("../starter-code/assets/destination/background-destination-tablet.jpg");
+  }
+  .crew {
+    background-image: url("../starter-code/assets/crew/background-crew-tablet.jpg");
+  }
+  .technology {
+    background-image: url("../starter-code/assets/technology/background-technology-tablet.jpg");
+  }
+  header nav .iconContainer {
+    display: none;
+  }
+  header nav .linksContainer {
+    display: block;
+    min-height: auto;
+    width: 450px;
+  }
+  header nav .linksContainer ul {
+    display: flex;
+    gap: 37px;
+    margin: 39px 0 0 48px;
+  }
+  header nav .linksContainer ul li {
+    padding-bottom: 39px;
+    margin: 0;
+  }
+  header nav .linksContainer ul li p:first-child {
+    display: none;
+  }
+  header nav .linksContainer ul .active {
+    border-bottom: 3px solid var(--white);
+    border-right: none;
+  }
+  main .homeMain {
+    margin-top: 20%;
+    margin-bottom: 80px;
+  }
+  main .homeMain .infoHome {
+    width: 70%;
+  }
+  main .homeMain .infoHome h1 {
+    font-size: 150px;
+  }
+  main .homeMain .infoHome p:first-child {
+    font-size: 20px;
+    letter-spacing: 3.375px;
+  }
+  main .homeMain .infoHome p:last-child {
+    font-size: 16px;
+  }
+  main .homeMain .btnCircle {
+    width: 242px;
+    height: 242px;
+  }
+  main .homeMain .btnCircle p {
+    font-size: 32px;
+  }
+  main .destinationMain .pick {
+    justify-content: flex-start;
+    margin-top: 40px;
+  }
+  main .destinationMain .pick p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  main .destinationMain .planet {
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
+  }
+  main .destinationMain .tabSection {
+    margin-top: 53px;
+  }
+  main .destinationMain .tabSection .tabs {
+    gap: 36px;
+  }
+  main .destinationMain .tabSection .tabs p {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+  main .destinationMain .tabSection .infoSection .firstBand {
+    padding-bottom: 49px;
+  }
+  main .destinationMain .tabSection .infoSection .firstBand h1 {
+    font-size: 80px;
+    line-height: 92px;
+  }
+  main .destinationMain .tabSection .infoSection .firstBand p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 573px;
+  }
+  main .destinationMain .tabSection .infoSection .secondBand {
+    flex-direction: row;
+    margin-bottom: 62px;
+    gap: 150px;
+  }
+  main .crewMain {
+    display: grid;
+    grid-template-rows: repeat(9, 103px);
+  }
+  main .crewMain .pick {
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 90%;
+    grid-row: 1/2;
+  }
+  main .crewMain .pick p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  main .crewMain .imgContainer {
+    height: 520px;
+    grid-row: 4/11;
+    margin-top: 94px;
+  }
+  main .crewMain .bulletContainer {
+    grid-row: 2/4;
+    border: none;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  main .crewMain .bulletContainer .bullets {
+    margin-top: 40px;
+  }
+  main .crewMain .bulletContainer .infoContainer {
+    margin: 0;
+    margin-top: 35px;
+  }
+  main .crewMain .bulletContainer .infoContainer h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  main .crewMain .bulletContainer .infoContainer h3 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  main .crewMain .bulletContainer .infoContainer p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 458px;
+  }
+  main .techMain {
+    margin-bottom: 80px;
+  }
+  main .techMain .pick {
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 65px;
+  }
+  main .techMain .pick p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  main .techMain .imgContainer {
+    margin-top: 60px;
+    margin-bottom: 56px;
+  }
+  main .techMain .pickerContainer {
+    margin-bottom: 44px;
+  }
+  main .techMain .pickerContainer .pickers p {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+  main .techMain .infoContainer h6 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-bottom: 16px;
+  }
+  main .techMain .infoContainer h3 {
+    font-size: 40px;
+  }
+  main .techMain .infoContainer p {
+    font-size: 16px;
+    line-height: 28px;
+    width: 60%;
+  }
+}
+@media (min-width: 1124px) {
+  html {
+    background-image: url("../starter-code/assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white);
+  }
+  .destination {
+    background-image: url("../starter-code/assets/destination/background-destination-desktop.jpg");
+  }
+  .crew {
+    background-image: url("../starter-code/assets/crew/background-crew-desktop.jpg");
+  }
+  .technology {
+    background-image: url("../starter-code/assets/technology/background-technology-desktop.jpg");
+  }
+  header nav {
+    margin-top: 64px;
+  }
+  header nav .iconContainer {
+    display: none;
+  }
+  header nav .linksContainer {
+    display: block;
+    min-height: auto;
+    width: 830px;
+    height: 96px;
+    top: 40px;
+  }
+  header nav .linksContainer ul {
+    display: flex;
+    gap: 37px;
+    margin: 39px 0 0 124px;
+  }
+  header nav .linksContainer ul li {
+    padding-bottom: 39px;
+    margin: 0;
+  }
+  header nav .linksContainer ul li:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+  header nav .linksContainer ul li p:first-child {
+    display: block;
+  }
+  header nav .linksContainer ul .active {
+    border-bottom: 3px solid var(--white);
+  }
+  header nav .linksContainer ul .active:hover {
+    border-bottom: 3px solid var(--white);
+  }
+  main .homeMain {
+    flex-direction: row;
+    margin-top: 15%;
+    margin-bottom: 80px;
+  }
+  main .homeMain .infoHome {
+    align-items: flex-start;
+    width: 65%;
+  }
+  main .homeMain .infoHome p:first-child {
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 4.725px;
+  }
+  main .homeMain .infoHome p:last-child {
+    text-align: left;
+    font-size: 18px;
+    width: 50%;
+  }
+  main .homeMain .infoHome h2 {
+    text-align: left;
+  }
+  main .homeMain .btnCircle {
+    cursor: pointer;
+    box-shadow: none;
+  }
+  main .homeMain .btnCircle:hover {
+    animation: pulseanimation 1s infinite;
+  }
+  main .destinationMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  main .destinationMain .pick {
+    margin-top: 76px;
+    margin-left: 100px;
+    width: -webkit-fill-available;
+  }
+  main .destinationMain .pick p {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+  main .destinationMain .planet {
+    width: 445px;
+    height: 445px;
+    margin: 0;
+    margin-top: 97px;
+  }
+  main .destinationMain .tabSection {
+    width: fit-content;
+  }
+  main .destinationMain .tabSection .tabs {
+    justify-content: flex-start;
+  }
+  main .destinationMain .tabSection .tabs p {
+    cursor: pointer;
+  }
+  main .destinationMain .tabSection .tabs .inactive:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  }
+  main .destinationMain .tabSection .infoSection {
+    margin-top: 37px;
+  }
+  main .destinationMain .tabSection .infoSection .firstBand {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-bottom: 54px;
+  }
+  main .destinationMain .tabSection .infoSection .firstBand p {
+    text-align: left;
+    width: 444px;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  main .destinationMain .tabSection .infoSection .firstBand h1 {
+    font-size: 100px;
+    line-height: 115px;
+  }
+  main .destinationMain .tabSection .infoSection .secondBand {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 79px;
+  }
+  main .destinationMain .tabSection .infoSection .secondBand div {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .crewMain {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 84.3px);
+  }
+  main .crewMain .pick {
+    margin-top: 76px;
+    margin-left: 160px;
+    width: -webkit-fill-available;
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+  main .crewMain .pick p {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+  main .crewMain .imgContainer {
+    grid-row: 1/11;
+    margin-top: 44px;
+    grid-column: 5/11;
+    height: 712px;
+  }
+  main .crewMain .bulletContainer {
+    grid-column: 1/6;
+    grid-row: 4/9;
+    margin-left: 160px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .crewMain .bulletContainer .bullets {
+    margin-top: 120px;
+  }
+  main .crewMain .bulletContainer .bullets div {
+    width: 15px;
+    height: 15px;
+  }
+  main .crewMain .bulletContainer .bullets div:hover {
+    opacity: 0.5;
+  }
+  main .crewMain .bulletContainer .bullets .active:hover {
+    opacity: 1;
+  }
+  main .crewMain .bulletContainer .infoContainer {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .crewMain .bulletContainer .infoContainer h4 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  main .crewMain .bulletContainer .infoContainer h3 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  main .crewMain .bulletContainer .infoContainer p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  main .techMain {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 166px;
+    margin-bottom: 80px;
+  }
+  main .techMain .imgContainer #vImg {
+    display: none;
+  }
+  main .techMain .imgContainer #vImg2 {
+    display: block;
+    width: 515px;
+    position: absolute;
+    right: 0;
+  }
+  main .techMain .infoContainer {
+    width: 470px;
+    margin-top: 137px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 80px;
+  }
+  main .techMain .infoContainer h6 {
+    margin-bottom: 11px;
+  }
+  main .techMain .infoContainer h3 {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  main .techMain .infoContainer p {
+    width: 95%;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  main .techMain .pickerContainer {
+    margin-top: 137px;
+  }
+  main .techMain .pickerContainer .pickers {
+    flex-direction: column;
+    gap: 32px;
+  }
+  main .techMain .pickerContainer .pickers p {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  main .techMain .pickerContainer .pickers p:hover {
+    border: 1px solid var(--white);
+  }
+  main .techMain .pick {
+    width: 100%;
+  }
+  main .techMain .pick p {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
