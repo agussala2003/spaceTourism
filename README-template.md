@@ -9,8 +9,8 @@
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://github.com/agussala2003/spaceTourism)
-- Live Site URL: [Add live site URL here](https://agussala2003.github.io/spaceTourism)
+- Solution URL: [https://github.com/agussala2003/spaceTourism](https://github.com/agussala2003/spaceTourism)
+- Live Site URL: [https://agussala2003.github.io/spaceTourism](https://agussala2003.github.io/spaceTourism)
 
 ## My process
 
